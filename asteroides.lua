@@ -26,7 +26,7 @@ function love.update(dt)
     if rng==5 then
     for i=0,1 do
         asteroid={
-            x= math.random(20,winW-50),
+            x= math.random(20,winW-10),
             y=0,
             speed=110,
             image=love.graphics.newImage('images/asteroid8bit.png')
@@ -48,7 +48,7 @@ function love.update(dt)
 end
 
 function love.draw()
-    rng=math.random(20,winW-50)
+    --rng=math.random(20,winW-50)
     love.graphics.draw(background)
     love.graphics.draw(player.image,player.x,player.y)
     love.graphics.setColor(255,255,255)

@@ -7,7 +7,7 @@ function love.conf(t)
     t.console = true                   -- Attach a console (boolean, Windows only)
 
 --window settings
-    t.window.title = "ASTEROIDS"          -- The window title (string)
+    t.window.title = "Hour of Code 2019 - LUA"          -- The window title (string)
     t.window.icon = nil                -- Filepath to an image to use as the window's icon (string)
     t.window.width = 800               -- The window width (number)
     t.window.height = 600              -- The window height (number)

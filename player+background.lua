@@ -27,9 +27,8 @@ function love.update(dt)
 end
 
 function love.draw()
-    love.graphics.draw(background)
-    love.graphics.draw(player.image,player.x,player.y)
+    love.graphics.setColor(255,255,255) --Se especifica el espectro de colores de el siguiente elemento
+    love.graphics.draw(background)      --Por defecto es 255,255,255 || El prototipo incluye un parámetro para el alpha o la opacidad, por defecto es 1
     love.graphics.setColor(255,255,255)
-
-
+    love.graphics.draw(player.image,player.x,player.y)  --El prototipo incluye rotación, escala...
 end
