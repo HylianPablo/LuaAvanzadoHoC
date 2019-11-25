@@ -48,7 +48,6 @@ function love.update(dt)
 end
 
 function love.draw()
-    --rng=math.random(20,winW-50)
     love.graphics.draw(background)
     love.graphics.draw(player.image,player.x,player.y)
     love.graphics.setColor(255,255,255)

@@ -21,7 +21,6 @@ function love.load()
     font = love.graphics.newFont("fonts/ARCADECLASSIC.TTF", 45) -- Archivo y tamaño
     titleFont = love.graphics.newFont("fonts/ARCADECLASSIC.TTF", 65) -- Archivo y tamaño
     finalFont = love.graphics.newFont("fonts/ARCADECLASSIC.TTF", 85) -- Archivo y tamaño
-    asteroidsFloating = 0
     background = love.graphics.newImage('images/8bitground.jpg')
     initBackground = love.graphics.newImage('images/initbackground.jpg')
 
@@ -65,7 +64,6 @@ function love.update(dt)
                     image = love.graphics.newImage('images/asteroid8bit.png')
                 }
                 table.insert(asteroids, asteroid)
-                asteroidsFloating = asteroidsFloating + 1
             end
         end
 
@@ -113,7 +111,6 @@ function love.draw()
         love.graphics.print("Press  enter  to  play", winW / 2 - 285, winH / 2-50)
         love.graphics.setColor(255,255,255)
     else
-        --rng = math.random(20, winW - 50)
         love.graphics.draw(background) -- Por defecto toma 255,255,255; es decir, blanco.
         love.graphics.setFont(font)
 
@@ -138,6 +135,7 @@ function love.draw()
             love.graphics.setColor(255, 0, 0)
             love.graphics.setFont(finalFont)
             love.graphics.print("THE END", winW / 2 - 150, winH / 2 - 50) -- Lo centramos manualmente debido a la posición del eje.
+            love.graphics.print("SCORE   "..score, winW / 2 - 150, winH / 2 + 70) -- Lo centramos manualmente debido a la posición del eje.
         end
     end
 end
